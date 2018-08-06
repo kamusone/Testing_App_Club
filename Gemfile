@@ -6,11 +6,12 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 group :development, :test do
-    gem 'sqlite3'
-  end
-  group :production do
-    gem 'pg'
-  end
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -55,13 +56,14 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'selenium-webdriver'
-  # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'rails-controller-testing', '1.0.2'
+  gem 'minitest',                 '5.10.3'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'guard',                    '2.13.0'
+  gem 'guard-minitest',           '2.4.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'bootstrap-sass', '3.3.7'
+gem 'bcrypt',         '3.1.12'
