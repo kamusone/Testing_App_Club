@@ -1,0 +1,12 @@
+<h2>Page Profil</h2>
+
+
+<div class="jumbotron">
+        <div class="container">
+          <p>Nom : <%= @user.first_name %></p>
+          <p>prenom : <%= @user.last_name %></p>
+          <p>Email : <%= @user.email %></p>
+
+          <p class="right"><a class="btn btn-primary btn-lg" href="<%= edit_user_path %>" role="button">Modifier »</a></p>
+        </div>
+      </div>
