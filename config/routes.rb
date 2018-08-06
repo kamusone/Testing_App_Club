@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     delete '/logout',  to: 'sessions#destroy'
 
     get  '/espace',  to: 'static_pages#espace'
+    get  '/post_login',  to: 'static_pages#post_login'
+
 end

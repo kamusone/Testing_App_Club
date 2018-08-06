@@ -7,10 +7,12 @@
           <p>Bienvenue sur le site du club de THP !</p>
           <p>Pour visiter le site clic ici ? </p>
 
-          <p><a class="btn btn-primary btn-lg" href="<%=  %>" role="button">Voir la réponse »</a></p>
-        </div>
       </div>
+      </div>
+      <h1>Voici les personalités adhérentes à notre club THP</h1>
 
-
+      <% @users.each do |user| %>
+          <p>Nom:<%= user.first_name %>, Prenom: <%= user.last_name %>, email: <%= user.email %></p>
+          <% end %>
 
     </main>
